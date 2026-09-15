@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 0603ce082e4a9084db5061a428767b58
+guid: 76f16cd81c5e0e445b1ad5c411711fe1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2800255781691066100
-    second: Copy-Press-Master_0
+      213: 3341093529323198379
+    second: spr_player_right_hit_0
+  - first:
+      213: -6375839425098158413
+    second: spr_player_right_hit_1
+  - first:
+      213: -7931111939729201523
+    second: spr_player_right_hit_2
+  - first:
+      213: 5922747424731439311
+    second: spr_player_right_hit_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +108,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -112,7 +121,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -128,13 +137,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Copy-Press-Master_0
+      name: spr_player_right_hit_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 659
-        height: 660
+        x: 23
+        y: 17
+        width: 17
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +152,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f60eeb0cc18cd620800000000000000
-      internalID: 2800255781691066100
+      spriteID: ba75aa0fcd2fd5e20800000000000000
+      internalID: 3341093529323198379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_player_right_hit_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 17
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bee712d2d77487a0800000000000000
+      internalID: -6375839425098158413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_player_right_hit_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 17
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86e49e26b70fe190800000000000000
+      internalID: -7931111939729201523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_player_right_hit_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 17
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc02a791763d13250800000000000000
+      internalID: 5922747424731439311
       vertices: []
       indices: 
       edges: []
@@ -163,7 +238,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Copy-Press-Master_0: 2800255781691066100
+      spr_player_right_hit_0: 3341093529323198379
+      spr_player_right_hit_1: -6375839425098158413
+      spr_player_right_hit_2: -7931111939729201523
+      spr_player_right_hit_3: 5922747424731439311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
