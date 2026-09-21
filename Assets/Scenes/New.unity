@@ -146,13 +146,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110063207}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.01884913, y: 0.018164294, z: -0.71981996, w: -0.69366705}
-  m_LocalPosition: {x: 0.7, y: 0.7, z: 0}
+  m_LocalRotation: {x: -0.012939157, y: 0.022755427, z: 0.49412692, w: -0.8689956}
+  m_LocalPosition: {x: -0.13, y: 0.74, z: -0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1206964187}
-  m_LocalEulerAnglesHint: {x: 0, y: -3, z: 452.12}
+  m_LocalEulerAnglesHint: {x: 0, y: -3, z: 300.753}
 --- !u!212 &110063209
 SpriteRenderer:
   serializedVersion: 3
@@ -202,7 +202,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 712035800519618848, guid: 36f4383fe2eac0941add099e9ed55b54, type: 3}
+  m_Sprite: {fileID: 712035800519618848, guid: 33291681baf9d7a4a97a529491f5f7d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -261,7 +261,6 @@ GameObject:
   - component: {fileID: 145109526}
   - component: {fileID: 145109525}
   - component: {fileID: 145109524}
-  - component: {fileID: 145109523}
   - component: {fileID: 145109521}
   - component: {fileID: 145109528}
   - component: {fileID: 145109529}
@@ -286,20 +285,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillState
   baseCooldown: 2
---- !u!114 &145109523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145109520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 165dda6a33e224e4bb2d0331aa33b2f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHealth: 100
-  startingHealth: 100
 --- !u!61 &145109524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -338,7 +323,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0625, y: 1.625}
+    oldSize: {x: 1.85, y: 2.65}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -422,7 +407,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8943998719802223876, guid: cdc88a3f47427904999a1be320e2eba4, type: 3}
+  m_Sprite: {fileID: -7164028333803484172, guid: c0b84c1b6ef3b334f93b2992fe49fdd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -472,6 +457,7 @@ MonoBehaviour:
   circleSegments: 64
   waveWidth: 0.08
   waveColor: {r: 1, g: 1, b: 1, a: 1}
+  baseCooldown: 10
 --- !u!95 &145109529
 Animator:
   serializedVersion: 7
@@ -507,6 +493,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 4
+  maxHealth: 100
+  startingHealth: 100
+  hitFlashColor: {r: 1, g: 0, b: 0, a: 1}
+  hitFlashDuration: 0.1
 --- !u!1 &576904150
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +608,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.51
-  m_PointLightOuterRadius: 1.93
+  m_PointLightOuterRadius: 40.4
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -780,7 +770,7 @@ Transform:
   m_GameObject: {fileID: 1206964186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.26, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -987,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8472488686894723037, guid: bcb34e3fe7d8d4547aef82b19e95ecfc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.12
+      value: 13.65
       objectReference: {fileID: 0}
     - target: {fileID: 8472488686894723037, guid: bcb34e3fe7d8d4547aef82b19e95ecfc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1205,7 +1195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1227330967262459652, guid: 3ee3a6418e48ab248a2b62e316cdfef3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.48
+      value: -13.55
       objectReference: {fileID: 0}
     - target: {fileID: 1227330967262459652, guid: 3ee3a6418e48ab248a2b62e316cdfef3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1285,7 +1275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967916822887469136, guid: fa235b4344facbd46bb1c3572510d4be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.86
+      value: -15.97
       objectReference: {fileID: 0}
     - target: {fileID: 967916822887469136, guid: fa235b4344facbd46bb1c3572510d4be, type: 3}
       propertyPath: m_LocalPosition.y

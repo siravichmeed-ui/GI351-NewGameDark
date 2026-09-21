@@ -22,7 +22,22 @@ public class EchoSkill : MonoBehaviour
     [SerializeField] private float waveWidth = 0.08f;
     [SerializeField] private Color waveColor = Color.white;
 
-    private SkillState skillState;
+    [Header("Skill Cooldown")]
+    [SerializeField] private float baseCooldown = 10f;
+
+    private float currentCooldown;
+    public bool IsReady { get; private set; }
+
+    public float CooldownPercent
+    {
+        get
+        {
+            if (baseCooldown <= 0f)
+                return 1f;
+
+            return 1f - (currentCooldown / baseCooldown);
+        }
+    }
 
     private Dictionary<Enemy, GameObject> activeOutlines =
         new Dictionary<Enemy, GameObject>();
@@ -32,11 +47,23 @@ public class EchoSkill : MonoBehaviour
 
     private void Awake()
     {
-        skillState = GetComponent<SkillState>();
+        IsReady = true;
+        currentCooldown = 0f;
     }
 
     private void Update()
     {
+        if (!IsReady)
+        {
+            currentCooldown -= Time.deltaTime;
+
+            if (currentCooldown <= 0f)
+            {
+                currentCooldown = 0f;
+                IsReady = true;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             UseEcho();
@@ -49,16 +76,31 @@ public class EchoSkill : MonoBehaviour
 
     private void UseEcho()
     {
-        if (skillState == null)
-        {
-            Debug.LogWarning("Player ไม่มี SkillState");
-            return;
-        }
-
-        if (!skillState.TryUseSkill())
+        if (!TryUseSkill())
             return;
 
         StartCoroutine(EchoWave());
+    }
+
+    private bool TryUseSkill()
+    {
+        if (!IsReady)
+            return false;
+
+        IsReady = false;
+        currentCooldown = baseCooldown;
+
+        return true;
+    }
+
+    public void ReduceCooldown(float amount)
+    {
+        baseCooldown = Mathf.Max(0.1f, baseCooldown - amount);
+    }
+
+    public void SetCooldown(float newCooldown)
+    {
+        baseCooldown = Mathf.Max(0.1f, newCooldown);
     }
 
     // =========================================================

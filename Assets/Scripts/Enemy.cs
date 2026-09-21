@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sr;
 
     private Transform player;
-    private PlayerHealth playerHealth;
+    private PlayerController playerHealth;
 
     private Vector2 movementDirection;
 
@@ -405,7 +405,7 @@ public class Enemy : MonoBehaviour
         player = playerObject.transform;
 
         playerHealth =
-            playerObject.GetComponent<PlayerHealth>();
+            playerObject.GetComponent<PlayerController>();
     }
 
     // =========================================================
