@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float chaseSpeed = 3.5f;
+    [SerializeField] private bool invertFacing = false; // ติ๊กถ้า sprite ตัวนี้หันด้านกลับ
 
     // =========================================================
     // PLAYER DETECTION
@@ -61,6 +62,7 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody2D rb;
     private Collider2D col;
+    private SpriteRenderer sr;
 
     private Transform player;
     private PlayerHealth playerHealth;
@@ -80,6 +82,7 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        sr = GetComponent<SpriteRenderer>();
 
         // ป้องกัน Starting HP มากกว่า Max HP
         startingHealth = Mathf.Clamp(
@@ -149,12 +152,33 @@ public class Enemy : MonoBehaviour
     {
         float currentSpeed = isChasing ? chaseSpeed : moveSpeed;
 
+        UpdateFacing();
+
         rb.MovePosition(
             rb.position +
             movementDirection *
             currentSpeed *
             Time.fixedDeltaTime
         );
+    }
+
+    // =========================================================
+    // FACING (หันหน้าตามทิศที่เดิน)
+    // =========================================================
+
+    private void UpdateFacing()
+    {
+        if (sr == null)
+            return;
+
+        if (movementDirection.x > 0.01f)
+        {
+            sr.flipX = invertFacing ? true : false;
+        }
+        else if (movementDirection.x < -0.01f)
+        {
+            sr.flipX = invertFacing ? false : true;
+        }
     }
 
     // =========================================================

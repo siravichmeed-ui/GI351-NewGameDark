@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6711419809533037734}
   - component: {fileID: 1899402960588562162}
   - component: {fileID: 2040746385316923030}
+  - component: {fileID: 3040891905524270123}
   m_Layer: 0
   m_Name: Enemy Easy test
   m_TagString: Enemy
@@ -182,3 +183,25 @@ MonoBehaviour:
   changeDirectionTimeMax: 3
   wallCheckDistance: 1.16
   wallCheckRadius: 0.4
+--- !u!95 &3040891905524270123
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6653402443666737253}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 600849ec64c9e0347b54c90886a985cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
